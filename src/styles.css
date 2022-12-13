@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:wght@400;700&display=swap');
+
+* {
+    margin: 0px;
+    border: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.todo-add-form__button {
+    padding: 6px 24px;
+    border-radius: 6px;
+    border: 1px solid darkgray;
+    opacity: 0.7;
+}
+
+.todo-add-form__button:hover {
+    opacity: 1;
+    box-shadow: 0px 0px 2.2px 1px rgba(0, 0, 0, 0.3)
+}
+
+.todo-add-form__button:active {
+    background-color: black;
+    color: white;
+}
+
+
+.icon {
+    height: 1em;
+    margin: auto;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.todo-item:hover .icon{
+    opacity: 0.28;
+}
+
+
+.container {
+    padding: 20px 60px;
+    max-width: 800px;
+    margin: auto;
+}
+
+
+
+
+

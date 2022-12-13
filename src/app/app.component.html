@@ -1,0 +1,32 @@
+<header class="header">
+    <h1 class="header__title">ToDos</h1>
+    <h2 class="header__greeter">A project by Kirby && NaDario.</h2>
+  </header>
+  
+  <section class="container">
+    <div class="todo-add-form">
+      <form>
+        <div>
+          <div class="todo-add-form__field">
+          <h2 class="todo-add-form__title">New ToDo</h2>
+            <label class="switch">
+              <input class="switch-input" type="checkbox" routerLink="/my-path" routerLinkToggle />
+              <span class="switch-label" data-off="Todo" data-on="Completed"></span>
+              <span class="switch-handle"></span>
+            </label>
+          </div>
+          <div class="todo-add-form__control">
+            <input
+              type="text"
+              class="todo-add-form__input"
+              placeholder="What would you like to accomplish?"
+            />
+            <button class="todo-add-form__button">ADD</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+<router-outlet></router-outlet>
+<app-footer></app-footer>
