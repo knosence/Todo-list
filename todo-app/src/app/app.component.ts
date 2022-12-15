@@ -1,5 +1,4 @@
 import { Component, Directive, HostListener, Input, Self } from '@angular/core';
-import { discardPeriodicTasks } from '@angular/core/testing';
 
 @Component({
   selector: 'app-root',
@@ -10,5 +9,4 @@ import { discardPeriodicTasks } from '@angular/core/testing';
 
 export class AppComponent {
   title = 'todo-app';
-
 }
