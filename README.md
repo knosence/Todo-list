@@ -6,7 +6,7 @@ For this project, you will be building an application that allows users to organ
 
 ## Todo List
 
-- [ ] Correctly displays all of the current tasks marked as "todo"
+- [x] Correctly displays all of the current tasks marked as "todo"
 - [x] Contains a button that allows for the addition of a new todo item
 
 ## Todo Item
