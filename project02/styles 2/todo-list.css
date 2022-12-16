@@ -1,0 +1,75 @@
+.description{
+  font-style:normal;
+  font-size:large;
+  text-align:justify;
+  background-color: rgb(245, 132, 38);
+  padding: 30px 40px;
+  color: white;
+
+}
+
+#header{
+  text-align: center;
+  background-color: RGB(0, 107, 182);
+  padding: 30px 40px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.inputTask{
+  text-align: center;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-style:oblique;
+  padding: 30px 50px;
+  background-color: rgb(245, 132, 38);
+  color: white;
+}
+
+.inputTask:after{
+  content:"";
+  display:table;
+  clear:both;
+}
+
+ul{
+  margin:0%;
+  padding: 0%;
+}
+
+ul li{
+  font-size: 18px;
+  padding: 12px 8px 12px 40px;
+  background-color:lightgrey;
+  position:relative;
+}
+
+ul li:nth-child(even) {
+  background-color: white;
+}
+
+.input {
+  font-size: 20px;
+  padding:10px;
+  border-radius: 0;
+}
+
+.addButton {
+  font-size: 20px;
+  background-color:antiquewhite;
+  text-align: center;
+  border-radius: 0;
+  padding:10px;
+
+}
+
+.addButton:hover{
+  background-color:  rgb(238, 107, 14);
+}
+
+p{
+  margin: 0%;
+  padding: 0%;
+  border: 0%;
+  font-style: inherit;
+  font-size: 120%;
+  vertical-align: baseline;
+}

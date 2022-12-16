@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/todo-list.css">
+    <title>Todo List</title>
+    
+</head>
+<body>
+    <section>
+        <div class = "description">
+            <p>Everyday we say to ourselves that we will get something done and often we lose 
+            track due to organization and time management, here we provide you with an application 
+            that will assist you with organizing all your tasks. Whether the task requires that you 
+            complete it today, tomorrow, within a week, month or even this year. This application 
+            is here to hold you accountable in completing the task you have set for yourself. 
+            Now, let's get straight to it!
+            </p>
+        </div>
+    </section>
+
+   <section>
+        <h1 id="header">My To Do List</h1>
+        <div class="inputTask">
+            <input type="text" class="input" placeholder="Task...">
+            <button onclick="addTask()" class="addButton">Add Task</button>
+        </div>
+   </section>
+
+    <section class="dueDate">
+        <h3>When is this task due?</h3>
+        <div class="date" id="dueDate">
+            <label for="dueDate">Due date:</label>
+            <input id="dueDate" type="date" name="dueDate" />
+        </div>
+    </section>
+    
+    <section class="todoList">
+        <h3>TODO List</h3>
+        <div class="list" id="todoList">
+            <label>
+                <input type="checkbox" class="checky"/>
+            </label>
+            
+            <div class="todo-content">
+                <input type="text" value="Call my grandparents" readonly/>
+            </div>
+
+            <div class="controls">
+                <button onclick="completeTask()" class="complete">Completed</button>
+                <button onclick="editTask()" class="edit">Edit</button>
+                <button onclick="deleteTask()" class="delete">Delete</button>
+            </div>
+        </div>
+
+        <div class="list" id="todo-list">
+            <label>
+                <input type="checkbox" class="checky"/>
+            </label>
+            
+            <div class="todo-content">
+                <input type="text" value="Set up brunch" readonly/>
+            </div>
+
+            <div class="controls">
+                <button onclick="completeTask()" class="complete">Completed</button>
+                <button onclick="editTask()" class="edit">Edit</button>
+                <button onclick="deleteTask()" class="delete">Delete</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="finishedList">
+        <h3>Tasks Completed</h3>
+        <div class="taskCompleted" id="finishedTask">
+
+            <div class="completed-content" >
+                <input type="text" value="Work on project"/>
+            </div>
+
+            <div class="controls">
+                <button onclick="editTask()" class="edit">Edit</button>
+                <button onclick="deleteTask()" class="delete">Delete</button>
+            </div>
+        </div>
+
+        <div class="taskCompleted" id="finishedTask">
+
+            <div class="completed-content" >
+                <input type="text" value="Go workout"/>
+            </div>
+
+            <div class="controls">
+                <button onclick="editTask()" class="edit">Edit</button>
+                <button onclick="deleteTask()" class="delete">Delete</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>>
