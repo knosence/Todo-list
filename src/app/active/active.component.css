@@ -1,0 +1,124 @@
+h3 {
+    size: 1.2em;
+    
+}
+
+.todos {
+    margin: auto;
+    width: 100%;
+}
+
+.todos-container {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    gap: 2em;
+    justify-content: space-around;
+
+}
+
+.active {
+    display: inline-block;
+    min-width: 500px;
+}
+
+.completed {
+    display: block;
+    min-width: 500px;
+
+}
+
+.todo-item__text {
+    max-width: 590px;
+}
+
+.todo-item__check {
+    display: flex;
+    flex-shrink: 0;
+    border: 2px solid #eee;
+    border-radius: 30%;
+    height: 2em;
+    width: 2em;
+
+    margin-right: 20px;
+    transition: background-color 0.3s ;
+}
+
+.todo-item:hover .todo-item__check{
+    background-color: lightgray;
+
+}
+
+.todo-item__check:hover .icon{
+    opacity: 1;
+}
+
+.todo-list {
+    height: auto;
+    position: relative;
+}
+
+
+.todo-item.completed .todo-item__check {
+    background-color: #E1B42B;
+}
+
+.todo-item.completed .todo-item__check .icon {
+    opacity: 0.6;
+}
+
+.todo-item__edit-delete-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    right: 0;
+    margin-right: 5px;
+}
+
+
+.icon--edit {
+    height: 1.5em;
+}
+
+.icon--edit:hover{
+    opacity: 1;
+}
+
+.icon--edit:active {
+    background-color: #242424;
+    border-radius: 6px;
+}
+
+.icon--delete {
+    height: 1.5em;
+}
+
+.icon--delete:hover {
+    opacity: 1;
+}
+
+.icon--delete:active {
+    background-color: red;
+    border-radius: 6px;
+}
+
+.todo-item:hover .todo-item__edit-delete-icons .icon {
+    transition-delay: 0.3s;
+}
+
+.todo-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 5px;
+    border-bottom: 1px rgba(0, 0, 0, 0.052) solid;
+
+}
+
+.todo-item:hover {
+    border: 1px rgb(228, 226, 226) solid;
+    box-shadow: 0px 1px 1px 1px rgba(226, 220, 220, 0.8);
+    border-radius: 6px;
+}
+

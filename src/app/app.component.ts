@@ -1,6 +1,4 @@
 import { Component, Directive, HostListener, Input, Self } from '@angular/core';
-import { discardPeriodicTasks } from '@angular/core/testing';
-import { TodosComponent } from './todos/todos.component';
 
 @Component({
   selector: 'app-root',

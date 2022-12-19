@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { discardPeriodicTasks } from '@angular/core/testing';
-import { CompletedComponent } from '../completed/completed.component';
+import { TodoTask } from '../models/todo-task';
 
 @Component({
   selector: 'app-todos',
@@ -10,7 +9,7 @@ import { CompletedComponent } from '../completed/completed.component';
 export class TodosComponent {
 
   //Functions
-  todos: any[] = [];
+  todos!: any[];
   completedTodos: any[] = [];
   editedTask: any;
   edit = false;
