@@ -15,7 +15,7 @@ export class ActiveComponent {
         },
         {
             id: 2,
-            text: "this is the second task",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
             isCompleted: false
         },
         {
@@ -30,7 +30,7 @@ export class ActiveComponent {
         },
         {
             id: 5,
-            text: "this is the fifth task",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
             isCompleted: true
         },
         {
