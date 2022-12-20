@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TodosComponent } from './todos/todos.component';
-import { FooterComponent } from './footer/footer.component';
 import { ActiveComponent } from './active/active.component';
 
 @NgModule({
@@ -12,7 +11,6 @@ import { ActiveComponent } from './active/active.component';
     AppComponent,
     TodosComponent,
     ActiveComponent,
-    FooterComponent,
 
   ],
   imports: [
