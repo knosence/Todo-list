@@ -1,39 +1,39 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoTask } from '../models/todo-task';
+import { DataService } from '../models/data.service';
 
 @Component({
   selector: 'app-todos',
   templateUrl: './todos.component.html',
   styleUrls: ['./todos.component.css']
 })
-export class TodosComponent {
+export class TodosComponent implements OnInit{
 
-  //Functions
-  todos!: any[];
-  completedTodos: any[] = [];
-  editedTask: any;
-  edit = false;
+  todos: TodoTask[] = [];
 
-  constructor() { }
-
-  ngOnInit() {
-
+  constructor(private dataService: DataService) { 
   }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
+
+  // ngOnInit(): void {
+  //   this.todos = this.dataService.getAllTodos()
+  // }
+
   // function to move the todo task to the completed list
-  completeTask(task: any) {
-    this.todos = this.todos.filter(t => t !== task);
-    this.completedTodos.push(task);
+  completeTask(todo: TodoTask) {
+    todo.isCompleted = !todo.isCompleted;
   }
   
   // function to edit task if mispell or any erros
-  editTask(task: any) {
-    this.edit = true;
-    this.editedTask = task;
+  editTask(todo: TodoTask) {
+  
   }
   // function to delete task if decided not to be on the list anymore
-  deleteTask(task: any) {
-    const index = this.todos.indexOf(task);
-    this.todos.splice(index, 1);
+  deleteTask(todo: TodoTask) {
+    const index = this.todos.indexOf(todo)
+    this.dataService.deleteTodo(index)
   }
 
 }
