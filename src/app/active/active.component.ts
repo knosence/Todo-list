@@ -7,6 +7,9 @@ import { TodoTask } from '../models/todo-task';
     styleUrls: ['./active.component.css']
 })
 export class ActiveComponent {
+    activeSelectedArray: TodoTask[] = [];
+    completedSelectedArray: TodoTask[] = [];
+
     todos: TodoTask[] = [
         {
             id: 1,
@@ -49,4 +52,22 @@ export class ActiveComponent {
             isCompleted: true
         },
     ];
+
+    activateSelected(){
+        for(let todos of this.completedSelectedArray){
+            todos.isCompleted = true;
+        }
+
+    }
+
+    deleteSelected(){
+
+    }
+
+    selected( todoArray: TodoTask[], ){
+       
+    }
+
+    
 }
+
