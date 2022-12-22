@@ -35,8 +35,6 @@ export class ActiveComponent implements OnInit {
         this.editable = true;
 
         this.todos[index].text = todo.text
-        
-
     }
 
     updatingTodo(text: string, todo: TodoTask): void {

@@ -10,6 +10,10 @@
     font-weight: 400;
 }
 
+html {
+    overflow-y: hidden;
+}
+
 .todo-add-form__button {
     padding: 6px 24px;
     border-radius: 6px;
@@ -51,6 +55,7 @@
     max-width: 100%;
     
 }
+
 
 
 

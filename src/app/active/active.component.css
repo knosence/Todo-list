@@ -56,6 +56,17 @@ h3 {
 .todo-list {
     height: auto;
     position: relative;
+
+}
+
+.scrollable {
+    overflow-y: scroll;
+    height: 530px;
+    scrollbar-width: none;
+}
+
+.scrollable::-webkit-scrollbar {
+    display: none;
 }
 
 
@@ -109,7 +120,7 @@ h3 {
     align-items: center;
     padding: 20px 5px;
     border-bottom: 1px rgba(0, 0, 0, 0.052) solid;
-    max-width: 600px;
+    width: 600px;
 
 }
 
