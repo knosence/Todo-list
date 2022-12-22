@@ -1,26 +1,34 @@
 <header class="header">
-    <h1 class="header__title">ToDos</h1>
-    <h2 class="header__greeter">A project by Kirby && NaDario.</h2>
-  </header>
-  
-  <section class="container">
-    <div class="todo-add-form">
-      <form>
-        <div>
-          <div class="todo-add-form__field">
+  <h1 class="header__title">ToDos</h1>
+  <h2 class="header__greeter">A project by Kirby && NaDario.</h2>
+</header>
+
+<section class="container">
+  <div class="todo-add-form">
+    <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
+      <div>
+        <div class="todo-add-form__field">
           <h2 class="todo-add-form__title">New ToDo</h2>
-          </div>
-          <div class="todo-add-form__control">
-            <input
-              type="text"
-              class="todo-add-form__input"
-              placeholder="What would you like to accomplish?"
-            />
-            <button click="addTask()" class="todo-add-form__button">ADD</button>
-          </div>
         </div>
-      </form>
-    </div>
-  </section>
+
+        <div class="todo-add-form__control">
+          <input ngModel #todoTextField="ngModel" required minlength="2" name="text" type="text" class="todo-add-form__input"
+            placeholder="What would you like to accomplish?" />
+          <button 
+            [disabled]="todoTextField.invalid"
+            click="addTask()" 
+            class="todo-add-form__button"
+            >ADD</button>
+        </div>
+
+        <div *ngIf="todoTextField.invalid && (todoTextField.dirty || todoTextField.touched)">
+          <p class="todo-add-form__invalid" *ngIf="todoTextField.errors?.['required']">Can't accomplish an empty ToDo ...Duh</p>
+          <p class="todo-add-form__invalid" *ngIf="todoTextField.errors?.['minlength']">No Shorthand allowed... need more then 2 letters</p>
+        </div>
+
+      </div>
+    </form>
+  </div>
+</section>
 
 <router-outlet></router-outlet>

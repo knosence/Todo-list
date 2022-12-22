@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoTask } from '../models/todo-task';
-import { DataService } from '../models/data.service';
+import { DataService } from '../Services/data.service';
 
 @Component({
   selector: 'app-todos',
@@ -14,7 +14,6 @@ export class TodosComponent implements OnInit{
   constructor(private dataService: DataService) { 
   }
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
   }
 
   // ngOnInit(): void {

@@ -3,14 +3,8 @@
 
         <div class="active">
             <div class="todo-title">
-                <div class="todo-item__check">
-                    <img class="icon" src="../../assets/check.png" alt="check mark icon"/>
-                </div>
+
                 <h3>TODO List</h3>
-            </div>
-            <div class="todo-list--buttons">
-              <button class="active-button">Complete Selected</button>
-                <button class="active-button">Delete Selected</button>
             </div>
             <div class="todo-list" *ngFor="let todo of todos">
                 <div class="todo-item" *ngIf="todo.isCompleted === false">
@@ -34,15 +28,12 @@
         <div class="completed">
             <div class="todo-title">
                 <h3>COMPLETED List</h3>
-            </div>
-            <div class="todo-list--buttons">
-              <button (click)="activateSelected()" class="completed-button">Activate Selected</button>
-                <button (click)="deleteSelected()" class="completed-button">Delete Selected</button>
+                <button class="todo-add-form__button">MAKE ALL ACTIVE</button>
             </div>
             <div class="todo-list" *ngFor="let todo of todos">
                 <div class="todo-item" *ngIf="todo.isCompleted === true">
                     <div class="todo-item__check">
-                        <img  class="icon" src="../../assets/check.png" alt="check mark icon"/>
+                        <img class="icon" src="../../assets/check.png" alt="check mark icon"/>
                     </div>
                     <div class="todo-item__text">
                         {{todo.text}}

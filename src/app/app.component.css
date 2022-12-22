@@ -43,3 +43,10 @@
 }
 
 
+.todo-add-form__invalid {
+    color: rgb(203, 4, 4);
+    font-size: .8em;
+    font-style: italic;
+}
+
+
