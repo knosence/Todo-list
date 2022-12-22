@@ -48,7 +48,7 @@ h3 {
     opacity: 1;
 }
 
-.todo-item:active .todo-item__check  {
+.todo-item:active .todo-item__check {
     background-color: #E1B42B;
 
 }
@@ -149,8 +149,8 @@ h3 {
     min-width: 600px;
 }
 
-.completed .todo-item__check{
- background-color: #E1B42B;
+.completed .todo-item__check {
+    background-color: #E1B42B;
 }
 
 .completed .todo-item__check .icon {
@@ -160,14 +160,46 @@ h3 {
 .completed .todo-item:hover .todo-item__check {
     background-color: #9e7c0c;
     opacity: 0.5
-    
 }
 
 .completed .todo-item__check:hover .icon {
     opacity: 0;
 }
 
-.completed .todo-item:active .todo-item__check  {
+.completed .todo-item:active .todo-item__check {
     background-color: lightgray;
 
+}
+
+.edit-field {
+    background: #242424;
+}
+
+textarea {
+    display: flex;
+    min-width: 600px;
+
+    flex: 1;
+    border-color: transparent;
+    background-color: rgb(233, 232, 232);
+    padding: 7px 7px 8px;
+    line-height: 1.28;
+    resize: none;
+    box-shadow: transparent 0px 0px 0px 1px;
+    transition: background 0.1s ease 0s;
+    overflow: auto;
+    overflow-y: hidden;
+    /* border-radius: 6px; */
+    appearance: none;
+}
+
+textarea:hover:not(:focus) {
+    background-color: rgb(235, 236, 240);
+}
+
+textarea:focus {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #4c9aff;
+    box-shadow: 0 0 0 1px #4c9aff;
+    outline: none;
 }

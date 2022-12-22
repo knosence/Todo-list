@@ -10,7 +10,7 @@ import { DataService } from '../Services/data.service';
 export class ActiveComponent implements OnInit {
 
     todos: TodoTask[] = [];
-
+    editable: boolean = false;
 
 
     constructor(private dataService: DataService) { };
@@ -19,9 +19,7 @@ export class ActiveComponent implements OnInit {
         this.todos = this.dataService.getAllTodos();
     }
 
-    onTodoClicked() {
-        
-    }
+
 
     flipCompleted(todo: TodoTask) {
         todo.isCompleted = !todo.isCompleted;
@@ -29,6 +27,18 @@ export class ActiveComponent implements OnInit {
 
     flipAllActive(todos: TodoTask[]) {
         todos.map(todo => todo.isCompleted = false);
+    }
+
+    editTodo(todo: TodoTask) {
+        const index = this.todos.indexOf(todo)
+        this.editable = true;
+
+        this.dataService.updateTodo(index, todo)
+    }
+
+    updatingTodo(todo: TodoTask) {
+        const index = this.todos.indexOf(todo)
+        this.editable = false;
     }
 
 }

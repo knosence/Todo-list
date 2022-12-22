@@ -7,30 +7,30 @@
                 <h3>TODO List</h3>
             </div>
             <div class="todo-list" *ngFor="let todo of todos">
-                <div class="todo-item"  (click)="flipCompleted(todo)" *ngIf="todo.isCompleted === false">
+                <div class="todo-item" (click)="flipCompleted(todo)" *ngIf="todo.isCompleted === false">
                     <div class="todo-item__check">
                         <img class="icon" src="../../assets/check.png" alt="check mark icon"/>
                     </div>
                     <div class="todo-item__text">
                         {{todo.text}}
                     </div>
-                    <div class="todo-item__edit-delete-icons">
-                        <img class="icon icon--edit" src="../../assets/edit.png" alt=""/>
+                    <div class="todo-item__edit-delete-icons" (click)="$event.stopPropagation()">
+                        <img class="icon icon--edit" (click)="editTodo(todo)" src="../../assets/edit.png" alt=""/>
                         <img class="icon icon--delete" src="../../assets/delete.png" alt=""/>
                     </div>
                 </div>
-                <div class="todo-editer"><!-- <label for="">{{todo.text}}</label> -->
-                    <!-- <input type="text"> -->
+                <div class="edit-field" (keyup.enter)="updatingTodo(todo)" *ngIf="editable === true && !todo.isCompleted">
+                    <textarea [ngModel]="todo.text"></textarea>
                 </div>
             </div>
         </div>
- 
+
         <div class="completed list">
             <div class="todo-title">
                 <h3>COMPLETED List</h3>
                 <button class="todo-add-form__button" (click)="flipAllActive(todos)">MAKE ALL ACTIVE</button>
             </div>
-            <div class="todo-list"  *ngFor="let todo of todos">
+            <div class="todo-list" *ngFor="let todo of todos">
                 <div class="todo-item" (click)="flipCompleted(todo)" *ngIf="todo.isCompleted === true">
                     <div class="todo-item__check">
                         <img class="icon" src="../../assets/check.png" alt="check mark icon"/>
@@ -38,13 +38,13 @@
                     <div class="todo-item__text">
                         {{todo.text}}
                     </div>
-                    <div class="todo-item__edit-delete-icons">
+                    <div class="todo-item__edit-delete-icons" (click)="editTodo(todo)" (click)="$event.stopPropagation()">
                         <img class="icon icon--edit" src="../../assets/edit.png" alt=""/>
                         <img class="icon icon--delete" src="../../assets/delete.png" alt=""/>
                     </div>
                 </div>
-                <div class="todo-editer"><!-- <label for="">{{todo.text}}</label> -->
-                    <!-- <input type="text"> -->
+                <div class="edit-field"  (keyup.enter)="updatingTodo(todo)" *ngIf="editable === true && todo.isCompleted">
+                    <textarea [ngModel]="todo.text"></textarea>
                 </div>
             </div>
         </div>
