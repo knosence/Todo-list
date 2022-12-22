@@ -10,7 +10,6 @@ import { DataService } from '../Services/data.service';
 export class ActiveComponent implements OnInit {
 
     todos: TodoTask[] = [];
-    editable: boolean = false;
     todo: TodoTask | undefined;
 
 
@@ -32,8 +31,7 @@ export class ActiveComponent implements OnInit {
 
     editTodo(todo: TodoTask) {
         const index = this.todos.indexOf(todo)
-        this.editable = true;
-
+        todo.isEditable = true;
         this.todos[index].text = todo.text
     }
 
@@ -41,11 +39,11 @@ export class ActiveComponent implements OnInit {
         const index = this.todos.indexOf(todo)
         console.log(text);
         this.todos[index].text = text;
-        this.editable = false;
+        todo.isEditable = false;
     }
 
-    cancelEdit() {
-        this.editable = false;
+    cancelEdit(todo: TodoTask) {
+        todo.isEditable = false;
     }
 
 }

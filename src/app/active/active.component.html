@@ -20,11 +20,11 @@
                             <img class="icon icon--delete" src="../../assets/delete.png" alt=""/>
                         </div>
                     </div>
-                    <div class="edit-field" (keyup.enter)="updatingTodo(todo.value, todo)" *ngIf="editable === true && !todo.isCompleted">
-                        <textarea [ngModel]="todo.text"></textarea>
+                    <div class="edit-field" (keyup.enter)="updatingTodo(editItem.value, todo)" *ngIf="todo.isEditable === true && !todo.isCompleted">
+                        <textarea [ngModel]="todo.text" #editItem></textarea>
                         <div class="edit-field--update-buttons">
-                            <button class="todo-add-form__button" (click)="updatingTodo(todo.value, todo)">UPDATE</button>
-                            <button class="todo-add-form__button" (click)="cancelEdit()">CANCEL</button>
+                            <button class="todo-add-form__button" (click)="updatingTodo(editItem.value, todo)">UPDATE</button>
+                            <button class="todo-add-form__button" (click)="cancelEdit(todo)">CANCEL</button>
                         </div>
 
                     </div>
@@ -46,16 +46,16 @@
                         <div class="todo-item__text">
                             {{todo.text}}
                         </div>
-                        <div class="todo-item__edit-delete-icons" (click)="editTodo(todo)" (click)="$event.stopPropagation()">
-                            <img class="icon icon--edit" src="../../assets/edit.png" alt=""/>
+                        <div class="todo-item__edit-delete-icons"  (click)="$event.stopPropagation()">
+                            <img class="icon icon--edit" (click)="editTodo(todo)" src="../../assets/edit.png" alt=""/>
                             <img class="icon icon--delete" src="../../assets/delete.png" alt=""/>
                         </div>
                     </div>
-                    <div class="edit-field" (keyup.enter)="updatingTodo(editedItem.value, todo)" *ngIf="editable === true && todo.isCompleted">
+                    <div class="edit-field" (keyup.enter)="updatingTodo(editedItem.value, todo)" *ngIf="todo.isEditable === true && todo.isCompleted">
                         <textarea id="todo-text" [value]="todo.text" #editedItem [ngModel]="todo.text"></textarea>
                         <div class="edit-field--update-buttons">
                             <button class="todo-add-form__button" (click)="updatingTodo(editedItem.value, todo)">UPDATE</button>
-                            <button class="todo-add-form__button" (click)="cancelEdit()">CANCEL</button>
+                            <button class="todo-add-form__button" (click)="cancelEdit(todo)">CANCEL</button>
                         </div>
                     </div>
                 </div>
