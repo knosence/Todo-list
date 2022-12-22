@@ -27,5 +27,9 @@ export class ActiveComponent implements OnInit {
         todo.isCompleted = !todo.isCompleted;
     }
 
+    flipAllActive(todos: TodoTask[]) {
+        todos.map(todo => todo.isCompleted = false);
+    }
+
 }
 

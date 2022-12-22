@@ -28,7 +28,7 @@
         <div class="completed">
             <div class="todo-title">
                 <h3>COMPLETED List</h3>
-                <button class="todo-add-form__button">MAKE ALL ACTIVE</button>
+                <button class="todo-add-form__button" (click)="flipAllActive(todos)">MAKE ALL ACTIVE</button>
             </div>
             <div class="todo-list"  *ngFor="let todo of todos">
                 <div class="todo-item" (click)="flipCompleted(todo)" *ngIf="todo.isCompleted === true">
