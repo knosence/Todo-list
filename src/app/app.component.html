@@ -21,10 +21,13 @@
             >ADD</button>
         </div>
 
-        <div *ngIf="todoTextField.invalid && isErrorsValid">
-          <p class="todo-add-form__invalid" *ngIf="todoTextField.errors?.['required']">Can't accomplish an empty ToDo ...Duh</p>
-          <p class="todo-add-form__invalid" *ngIf="todoTextField.errors?.['minlength']">No Shorthand allowed... need more then 2 letters</p>
+        <div>
+          <div *ngIf="!todoTextField.valid">
+            <p class="todo-add-form__invalid" *ngIf="todoTextField.errors?.['required'] && todoTextField.touched">Can't accomplish an empty ToDo ...Duh</p>
+            <p class="todo-add-form__invalid" *ngIf="todoTextField.errors?.['minlength']">No Shorthand allowed... need more then 2 letters</p>
+          </div>
         </div>
+        
 
       </div>
     </form>

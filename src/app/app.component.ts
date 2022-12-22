@@ -13,7 +13,6 @@ import { DataService } from './Services/data.service';
 export class AppComponent implements OnInit {
   title = 'todo-app';
 
-  isErrorsValid: boolean = false;
 
   ngOnInit(): void {
 
@@ -21,10 +20,25 @@ export class AppComponent implements OnInit {
 
   constructor(private dataService: DataService) {}
 
-  onFormSubmit(form: NgForm) {   
-    if (form.invalid) return this.isErrorsValid = true
-    else return [this.dataService.addTodo(new TodoTask(form.value.text)),
-      this.isErrorsValid = false,
-      form.reset()]
+   onFormSubmit(form: NgForm) {   
+    this.dataService.addTodo(new TodoTask(form.value.text)),
+    form.reset()
+    
   }
+
+  // onFormSubmit(form: NgForm) {   
+  //    console.log(this.isErrorsValid)
+  //   if (!form.valid) return this.flipBool(false);
+  //    console.log(this.isErrorsValid + "before add")
+  //   return [this.dataService.addTodo(new TodoTask(form.value.text)),
+  //     this.flipBool(true),
+  //      console.log(this.isErrorsValid+ " after add"),
+  //     form.reset()]
+  // }
+
+  // flipBool(bool: boolean): boolean {
+  //   console.log(this.isErrorsValid + "in method")
+  //   return this.isErrorsValid = bool;
+   
+  // }
 }
