@@ -1,4 +1,5 @@
 export class TodoTask {
+value: any;
     
     constructor(
         public text: string,

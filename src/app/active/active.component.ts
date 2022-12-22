@@ -11,6 +11,7 @@ export class ActiveComponent implements OnInit {
 
     todos: TodoTask[] = [];
     editable: boolean = false;
+    todo: TodoTask | undefined;
 
 
     constructor(private dataService: DataService) { };
@@ -33,11 +34,19 @@ export class ActiveComponent implements OnInit {
         const index = this.todos.indexOf(todo)
         this.editable = true;
 
-        this.dataService.updateTodo(index, todo)
+        this.todos[index].text = todo.text
+        
+
     }
 
-    updatingTodo(todo: TodoTask) {
+    updatingTodo(text: string, todo: TodoTask): void {
         const index = this.todos.indexOf(todo)
+        console.log(text);
+        this.todos[index].text = text;
+        this.editable = false;
+    }
+
+    cancelEdit() {
         this.editable = false;
     }
 

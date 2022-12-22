@@ -171,8 +171,9 @@ h3 {
 
 }
 
-.edit-field {
-    background: #242424;
+
+.edit-field:active {
+    transition: 3ms;
 }
 
 textarea {
@@ -202,4 +203,11 @@ textarea:focus {
     border: 1px solid #4c9aff;
     box-shadow: 0 0 0 1px #4c9aff;
     outline: none;
+}
+
+.edit-field--update-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin: 10px;
 }

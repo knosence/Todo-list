@@ -12,7 +12,7 @@ export class DataService {
             "this is the first task"
         ),
         new TodoTask(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco"
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim "
         ),
         new TodoTask(
             "this is the third task", true
@@ -21,7 +21,7 @@ export class DataService {
             "this is the fouth task"
         ),
         new TodoTask(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco", true
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ", true
         ),
         new TodoTask(
             "this is the sixth task", true
