@@ -7,7 +7,7 @@
                 <h3>TODO List</h3>
             </div>
             <div class="todo-list" *ngFor="let todo of todos">
-                <div class="todo-item" *ngIf="todo.isCompleted === false">
+                <div class="todo-item"  (click)="flipCompleted(todo)" *ngIf="todo.isCompleted === false">
                     <div class="todo-item__check">
                         <img class="icon" src="../../assets/check.png" alt="check mark icon"/>
                     </div>
@@ -30,8 +30,8 @@
                 <h3>COMPLETED List</h3>
                 <button class="todo-add-form__button">MAKE ALL ACTIVE</button>
             </div>
-            <div class="todo-list" *ngFor="let todo of todos">
-                <div class="todo-item" *ngIf="todo.isCompleted === true">
+            <div class="todo-list"  *ngFor="let todo of todos">
+                <div class="todo-item" (click)="flipCompleted(todo)" *ngIf="todo.isCompleted === true">
                     <div class="todo-item__check">
                         <img class="icon" src="../../assets/check.png" alt="check mark icon"/>
                     </div>
