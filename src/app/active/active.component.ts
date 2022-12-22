@@ -46,5 +46,10 @@ export class ActiveComponent implements OnInit {
         todo.isEditable = false;
     }
 
+    deleteTodo(todo: TodoTask) {
+        const index = this.todos.indexOf(todo)
+        this.dataService.deleteTodo(index)
+    }
+
 }
 

@@ -17,7 +17,7 @@
                         </div>
                         <div class="todo-item__edit-delete-icons" (click)="$event.stopPropagation()">
                             <img class="icon icon--edit" (click)="editTodo(todo)" src="../../assets/edit.png" alt=""/>
-                            <img class="icon icon--delete" src="../../assets/delete.png" alt=""/>
+                            <img class="icon icon--delete" (click)="deleteTodo(todo)" src="../../assets/delete.png" alt=""/>
                         </div>
                     </div>
                     <div class="edit-field" (keyup.enter)="updatingTodo(editItem.value, todo)" *ngIf="todo.isEditable === true && !todo.isCompleted">
@@ -48,7 +48,7 @@
                         </div>
                         <div class="todo-item__edit-delete-icons"  (click)="$event.stopPropagation()">
                             <img class="icon icon--edit" (click)="editTodo(todo)" src="../../assets/edit.png" alt=""/>
-                            <img class="icon icon--delete" src="../../assets/delete.png" alt=""/>
+                            <img class="icon icon--delete" (click)="deleteTodo(todo)" src="../../assets/delete.png" alt=""/>
                         </div>
                     </div>
                     <div class="edit-field" (keyup.enter)="updatingTodo(editedItem.value, todo)" *ngIf="todo.isEditable === true && todo.isCompleted">
