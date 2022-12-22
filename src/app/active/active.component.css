@@ -144,9 +144,9 @@ h3 {
 }
 
 
-.completed {
+.list {
     display: block;
-    min-width: 500px;
+    min-width: 600px;
 }
 
 .completed .todo-item__check{
