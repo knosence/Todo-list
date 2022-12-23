@@ -13,13 +13,13 @@ For this project, you will be building an application that allows users to organ
 
 - [x] Contains a button that allows for the editing of the todo item
 - [x] Contains a button that allows for the deletion of the todo item from the todo list
-- [ ] Contains a button that allows for the completion of the todo item, and, in doing so, will move it to the completed
+- [X] Contains a button that allows for the completion of the todo item, and, in doing so, will move it to the completed
         list
 
 ## Finished List
 
 - [x] Correctly displays all of the current tasks marked as "completed"
-- [ ] Contains a button for the addition of a new finished item
+- [X] Contains a button for the addition of a new finished item
 
 ## Finished Item
 
@@ -32,5 +32,5 @@ For this project, you will be building an application that allows users to organ
 - [x] Your website should maintain thematic consistency with font, coloring, etc.
 - [x] Any images used should be sized appropriately and have alternative text displayed should the image fail to render
 - [x] Collaboration with partner(s) to meet required deliverables
-- [ ] Proper use of GitHub Branches to maintain the versioning of your webpage
+- [X] Proper use of GitHub Branches to maintain the versioning of your webpage
 - [x] All of the finished project code should be present on the main/master branch upon project completion
