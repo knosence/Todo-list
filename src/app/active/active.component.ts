@@ -1,3 +1,4 @@
+import { formatCurrency } from '@angular/common';
 import { Component, OnInit, } from '@angular/core';
 import { TodoTask } from '../models/todo-task';
 import { DataService } from '../Services/data.service';

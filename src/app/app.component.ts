@@ -10,35 +10,25 @@ import { DataService } from './Services/data.service';
 })
 
 
-export class AppComponent implements OnInit {
+export class AppComponent{
   title = 'todo-app';
 
+  isErrorsValid: boolean = false;
 
-  ngOnInit(): void {
-
-  }
 
   constructor(private dataService: DataService) {}
 
-   onFormSubmit(form: NgForm) {   
-    this.dataService.addTodo(new TodoTask(form.value.text)),
-    form.reset()
-    
+
+  onFormSubmit(form: NgForm) {   
+      if (form.invalid){ 
+        this.isErrorsValid = true
+      } else {
+        this.dataService.addTodo(new TodoTask(form.value.text)),
+        this.isErrorsValid = false;
+      }
+      form.reset()
+      console.log("fifth " + this.isErrorsValid + " " + form.invalid)
   }
 
-  // onFormSubmit(form: NgForm) {   
-  //    console.log(this.isErrorsValid)
-  //   if (!form.valid) return this.flipBool(false);
-  //    console.log(this.isErrorsValid + "before add")
-  //   return [this.dataService.addTodo(new TodoTask(form.value.text)),
-  //     this.flipBool(true),
-  //      console.log(this.isErrorsValid+ " after add"),
-  //     form.reset()]
-  // }
 
-  // flipBool(bool: boolean): boolean {
-  //   console.log(this.isErrorsValid + "in method")
-  //   return this.isErrorsValid = bool;
-   
-  // }
 }

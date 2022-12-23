@@ -12,17 +12,18 @@
         </div>
 
         <div class="todo-add-form__control">
-          <input ngModel #todoTextField="ngModel" required minlength="2" name="text" type="text" class="todo-add-form__input"
+          <input ngModel #todoTextField="ngModel"  required minlength="2" name="text" type="text" class="todo-add-form__input"
             placeholder="What would you like to accomplish?" />
           <button 
             [disabled]="todoTextField.invalid"
+            type="submit"
             click="addTask()" 
             class="todo-add-form__button"
             >ADD</button>
         </div>
 
         <div>
-          <div *ngIf="!todoTextField.valid">
+          <div *ngIf="todoTextField.invalid">
             <p class="todo-add-form__invalid" *ngIf="todoTextField.errors?.['required'] && todoTextField.touched">Can't accomplish an empty ToDo ...Duh</p>
             <p class="todo-add-form__invalid" *ngIf="todoTextField.errors?.['minlength']">No Shorthand allowed... need more then 2 letters</p>
           </div>
